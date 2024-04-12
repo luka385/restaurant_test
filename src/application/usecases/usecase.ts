@@ -1,6 +1,6 @@
-import { RepositoryPort } from "application/ports/port";
-import { Reservation } from "domain/reservation";
-import { UsecasePort } from "application/ports/port";
+import { RepositoryPort } from "../ports/port";
+import { Reservation } from "../../domain/reservation";
+import { UsecasePort } from "../ports/port";
 
 
 export class Usecase implements UsecasePort {

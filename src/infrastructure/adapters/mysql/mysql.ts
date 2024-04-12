@@ -1,6 +1,6 @@
 import { PrismaClient} from '@prisma/client';
-import { RepositoryPort } from 'application/ports/port';
-import { Reservation } from 'domain/reservation';
+import { RepositoryPort } from '../../../application/ports/port';
+import { Reservation } from '../../../domain/reservation';
 
 const prisma = new PrismaClient();
 

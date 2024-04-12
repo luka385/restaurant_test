@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { Handler } from './handler';
-import { Usecase } from 'application/usecases/usecase';
+import { Usecase } from '../../../application/usecases/usecase';
 
 export function setupServer(usecase : Usecase): Router {
         const r = Router();

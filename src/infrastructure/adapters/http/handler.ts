@@ -1,16 +1,24 @@
 import {Request, Response} from 'express'; 
-import { UsecasePort } from 'application/ports/port';
+import { UsecasePort } from '../../../application/ports/port';
 
 export class Handler {
     constructor(private usecase: UsecasePort) {}
 
     async createReservation(req: Request, res : Response): Promise<void> {
         try {
+            console.log('Request body:', req.body);
+
+            if (!req.body) {
+                throw new Error('Request body is undefined');
+            }
+
             const {id, name, phone} = req.body
-            const NewUser = await this.usecase.CreateReservation({id, name, phone});
-            res.status(201).json(NewUser);
+            const newReservation = await this.usecase.CreateReservation({id , name, phone});
+            console.log('New reservation:', newReservation);
+            res.status(201).json(newReservation);
         }catch (err) {
-            res.status(500).json({err: 'INTERNAL SERVER ERROR'})
+            console.log(err)
+            res.status(400).json({err: 'BAD REQUEST'})
         }
     }
 
