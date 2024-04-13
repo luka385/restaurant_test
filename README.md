@@ -8,15 +8,15 @@ To use this application, ensure that you have Node.js and MySQL installed on you
 
 ### Installing Node.Js
 
-1. Visit the official Node.js webside: [https.//nodejs.org/](https://nodejs.org)
-2. Dowload the recommended version for your operating system.
-3. Follow the installation instructions provided on the webside.
+- Visit the official Node.js webside: [https.//nodejs.org/](https://nodejs.org)
+- Dowload the recommended version for your operating system.
+- Follow the installation instructions provided on the webside.
 
 ### Application Installation
 
-1. Clone this repository to your local machine.
-2. Open terminal and navigate to application directory.
-3. Install the dependencies whit the following command:
+- Clone this repository to your local machine.
+- Open terminal and navigate to application directory.
+- Install the dependencies whit the following command:
 
 ```bash
 
