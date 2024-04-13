@@ -23,3 +23,30 @@ To use this application, ensure that you have Node.js and MySQL installed on you
 npm install
 
 ```
+
+### Setup Prisma
+
+1. Install Prisma globally by running:
+
+```bash
+
+sudo npm install -g prisma
+
+```
+
+2. Configure your MySQL database connection in the `**.env**` file. Ensure you have the necessary
+   enviroment variables set up, such as:
+
+```bash
+
+    DATABASE_URL="mysql://user:password@localhost:3306/restaurant"
+
+```
+
+3. Generate Prisma client by running:
+
+```bash
+
+npx prisma generate
+
+```
