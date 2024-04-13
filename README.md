@@ -50,3 +50,14 @@ DATABASE_URL="mysql://user:password@localhost:3306/restaurant"
 npx prisma generate
 
 ```
+
+### Using the Application
+
+- After setting up Prisma and configuring the `.env` file, you can start using application.
+- Run your application using the appropriate command, such as:
+
+```bash
+
+npm run dev
+
+```
