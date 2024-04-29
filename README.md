@@ -51,6 +51,14 @@ npx prisma generate
 
 ```
 
+- After that execute the next command for generate DB:
+
+```bash
+
+npx prisma migrate dev
+
+```
+
 ### Using the Application
 
 - After setting up Prisma and configuring the `.env` file, you can start using application.
