@@ -1,5 +1,6 @@
 import {Request, Response} from 'express'; 
-import { UsecasePort } from '../../../application/ports/port';
+import { UsecasePort } from '../../../../application/ports/port';
+import { generateToken } from '../utils/jwtutils';
 
 export class Handler {
     constructor(private usecase: UsecasePort) {}
@@ -14,7 +15,7 @@ export class Handler {
 
             const {id, name, phone} = req.body
             const newReservation = await this.usecase.CreateReservation({id , name, phone});
-            console.log('New reservation:', newReservation);
+            
             res.status(201).json(newReservation);
         }catch (err) {
             console.log(err)
@@ -39,5 +40,10 @@ export class Handler {
         }catch (err) {
             res.status(500).json({err : 'INTERNAL SERVER ERROR'})
         }
+    }
+
+    async token(req: Request, res: Response): Promise<void> {
+        const token = generateToken({name: 'luka', id: 1});
+        res.status(200).json({token});
     }
 }

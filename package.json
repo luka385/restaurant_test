@@ -20,11 +20,14 @@
   "homepage": "https://github.com/luka385/reservation#readme",
   "dependencies": {
     "@prisma/client": "^5.12.1",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/mysql": "^2.15.26",
     "@types/node": "^20.12.7",
     "nodemon": "^3.1.0",
